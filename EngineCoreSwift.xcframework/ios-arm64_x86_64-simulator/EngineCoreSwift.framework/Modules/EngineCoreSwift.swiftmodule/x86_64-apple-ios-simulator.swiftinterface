@@ -8,6 +8,7 @@ import Swift
 import UIKit
 import _Concurrency
 @objc @_inheritsConvenienceInitializers public class EngineCoreBase : ObjectiveC.NSObject {
+  public var delegate: EngineCoreSwift.CarouselViewDelegate?
   @objc override dynamic public init()
   public func EngineButton(frame: CoreGraphics.CGRect?, title: Swift.String?, state: UIKit.UIControl.State?, font: UIKit.UIFont?, color: UIKit.UIColor?) -> UIKit.UIButton
   public func FixedActionTileView(frame: CoreGraphics.CGRect, title: Swift.String, image: Swift.String) -> UIKit.UIView
