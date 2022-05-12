@@ -21,16 +21,22 @@ let package = Package(
         
         .target(
             name: "EngineCore",
-            dependencies: ["EngineUIKit", "EngineCoreSwift"]),
+            dependencies: ["EngineCoreSwift"]),
         
-        .binaryTarget(
-            name: "EngineUIKit", url: "https://github.com/shravangudikadi1/EngineUIKit/blob/main/EngineUIKit.xcframework.zip?raw=true", checksum: "8bc2f202eda84954f1a86b0776a2019828f81f5529f163bccd03590cf23ef613"),
+//        .binaryTarget(
+//            name: "EngineUIKit", url: "https://github.com/shravangudikadi1/EngineUIKit/blob/main/EngineUIKit.xcframework.zip?raw=true", checksum: "b3c2aca2e60c01da4c0d82ff1151488acd6071d3db4fbb7fd7558a52590a"),
         .binaryTarget(
             name: "EngineCoreSwift", path: "EngineCoreSwift.xcframework"),
+//        .binaryTarget(
+//            name: "EngineUIKit", path: "EngineUIKit.xcframework"),
+//
 
         
+
         .testTarget(
             name: "EngineCoreTests",
             dependencies: ["EngineCore"]),
     ]
+    
+    
 )
