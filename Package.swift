@@ -19,17 +19,17 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         
-//        .target(
-//            name: "EngineCore",
-//            dependencies: ["EngineCoreSwift"]),
+        .target(
+            name: "EngineCore",
+            dependencies: ["EngineUIKit", "EngineCoreSwift"]),
         
 //        .binaryTarget(
 //            name: "EngineUIKit", url: "https://github.com/shravangudikadi1/EngineUIKit/blob/main/EngineUIKit.xcframework.zip?raw=true", checksum: "b3c2aca2e60c01da4c0d82ff1151488acd6071d3db4fbb7fd7558a52590a"),
         .binaryTarget(
             name: "EngineCoreSwift", path: "EngineCoreSwift.xcframework"),
-//        .binaryTarget(
-//            name: "EngineUIKit", path: "EngineUIKit.xcframework"),
-//
+        .binaryTarget(
+            name: "EngineUIKit", path: "EngineUIKit.xcframework"),
+
 ]
     
     
