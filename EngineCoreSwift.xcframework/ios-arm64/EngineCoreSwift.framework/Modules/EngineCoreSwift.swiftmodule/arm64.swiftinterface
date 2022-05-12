@@ -13,6 +13,7 @@ import _Concurrency
   public func EngineButton(frame: CoreGraphics.CGRect?, title: Swift.String?, state: UIKit.UIControl.State?, font: UIKit.UIFont?, color: UIKit.UIColor?) -> UIKit.UIButton
   public func FixedActionTileView(frame: CoreGraphics.CGRect, title: Swift.String, image: Swift.String) -> UIKit.UIView
   public func ImageCarouselView(_ images: [UIKit.UIImage?]) -> UIKit.UIView
+  public func animatedPageControl(_ images: [UIKit.UIImage?]) -> UIKit.UIView
   @objc deinit
 }
 extension EngineCoreSwift.EngineCoreBase : EngineUIKit.ImageCarouselViewDelegate {
