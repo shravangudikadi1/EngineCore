@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "EngineCore",
-            targets: ["EngineCore"]),
+            targets: ["EngineCoreSwift"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,7 +26,7 @@ let package = Package(
 //        .binaryTarget(
 //            name: "EngineUIKit", url: "https://github.com/shravangudikadi1/EngineUIKit/blob/main/EngineUIKit.xcframework.zip?raw=true", checksum: "b3c2aca2e60c01da4c0d82ff1151488acd6071d3db4fbb7fd7558a52590a"),
         .binaryTarget(
-            name: "EngineCore", path: "EngineCoreSwift.xcframework"),
+            name: "EngineCoreSwift", path: "EngineCoreSwift.xcframework"),
 //        .binaryTarget(
 //            name: "EngineUIKit", path: "EngineUIKit.xcframework"),
 //
