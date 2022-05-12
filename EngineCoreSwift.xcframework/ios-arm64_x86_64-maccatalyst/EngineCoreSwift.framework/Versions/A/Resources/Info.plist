@@ -44,5 +44,9 @@
 	<string>12.1</string>
 	<key>NSHumanReadableCopyright</key>
 	<string></string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>2</integer>
+	</array>
 </dict>
 </plist>

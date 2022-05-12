@@ -4,3 +4,8 @@ framework module EngineCoreSwift {
   export *
   module * { export * }
 }
+
+module EngineCoreSwift.Swift {
+    header "EngineCoreSwift-Swift.h"
+    requires objc
+}
