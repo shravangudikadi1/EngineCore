@@ -1,0 +1,6 @@
+framework module EngineCoreSwift {
+  umbrella header "EngineCoreSwift.h"
+
+  export *
+  module * { export * }
+}
