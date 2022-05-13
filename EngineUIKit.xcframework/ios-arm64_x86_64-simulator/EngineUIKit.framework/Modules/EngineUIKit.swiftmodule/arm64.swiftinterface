@@ -18,11 +18,28 @@ public protocol ImageCarouselViewDelegate : ObjectiveC.NSObjectProtocol {
   @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreGraphics.CGRect?, title: Swift.String?, state: UIKit.UIControl.State?, font: UIKit.UIFont?, color: UIKit.UIColor?)
   @objc deinit
 }
-public class Action {
-  public init(title: Swift.String, image: Swift.String)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class PageCollectionView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func loadNib() -> EngineUIKit.PagingCollectionView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class FixedActionTileView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, title: Swift.String?, image: Swift.String?)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class FixedActionTileView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PagingCollectionView : UIKit.UIView {
+  @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public func configureView(_ images: [UIKit.UIImage?])
+  @objc deinit
+}
+extension EngineUIKit.PagingCollectionView : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension EngineUIKit.PagingCollectionView : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
 }
