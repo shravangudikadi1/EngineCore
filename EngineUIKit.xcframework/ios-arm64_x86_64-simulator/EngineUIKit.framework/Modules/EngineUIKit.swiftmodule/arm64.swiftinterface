@@ -29,6 +29,7 @@ public protocol ImageCarouselViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PagingCollectionView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func intantiateFromNib() -> EngineUIKit.PagingCollectionView?
   @objc dynamic public init()
   @_Concurrency.MainActor(unsafe) public func configureView(_ images: [UIKit.UIImage?])
   @objc deinit
