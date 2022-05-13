@@ -10,16 +10,24 @@ import _Concurrency
 @objc @_inheritsConvenienceInitializers public class EngineCoreBase : ObjectiveC.NSObject {
   public var delegate: EngineCoreSwift.CarouselViewDelegate?
   public var viewModel: EngineUIKit.FixedActionTileViewModel?
+  public var segmentedControlDelegate: EngineCoreSwift.SegmentedTapDelegate?
   @objc override dynamic public init()
   public func EngineButton(frame: CoreGraphics.CGRect?, title: Swift.String?, state: UIKit.UIControl.State?, font: UIKit.UIFont?, color: UIKit.UIColor?) -> UIKit.UIButton
   public func FixedActionTileView() -> UIKit.UIView
   public func ImageCarouselView(_ images: [UIKit.UIImage?]) -> UIKit.UIView
   public func animatedPageControl(_ images: [UIKit.UIImage?]) -> UIKit.UIView
+  public func segmentedControlView() -> UIKit.UIView
   @objc deinit
 }
 extension EngineCoreSwift.EngineCoreBase : EngineUIKit.ImageCarouselViewDelegate {
   public func imageCarouselView(_ imageCarouselView: EngineUIKit.ImageCarouselView, didShowImageAt index: Swift.Int)
 }
+extension EngineCoreSwift.EngineCoreBase : EngineUIKit.CustomSegmentedControlDelegate {
+  public func change(to index: Swift.Int)
+}
 public protocol CarouselViewDelegate {
   func CarouselView(_ imageCarouselView: EngineUIKit.ImageCarouselView, didShowImageAt index: Swift.Int)
+}
+public protocol SegmentedTapDelegate {
+  func change(to index: Swift.Int)
 }

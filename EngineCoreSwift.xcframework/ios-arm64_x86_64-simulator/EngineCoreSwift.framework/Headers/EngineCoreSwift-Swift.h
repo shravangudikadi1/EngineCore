@@ -215,6 +215,7 @@ SWIFT_CLASS("_TtC15EngineCoreSwift14EngineCoreBase")
 @end
 
 
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
@@ -435,6 +436,7 @@ SWIFT_CLASS("_TtC15EngineCoreSwift14EngineCoreBase")
 @interface EngineCoreBase : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 #if __has_attribute(external_source_symbol)
