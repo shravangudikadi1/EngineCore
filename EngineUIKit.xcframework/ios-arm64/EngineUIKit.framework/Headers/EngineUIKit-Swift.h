@@ -218,7 +218,7 @@ SWIFT_CLASS("_TtC11EngineUIKit12EngineButton")
 
 SWIFT_CLASS("_TtC11EngineUIKit19FixedActionTileView")
 @interface FixedActionTileView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
@@ -227,13 +227,6 @@ SWIFT_CLASS("_TtC11EngineUIKit17ImageCarouselView")
 @interface ImageCarouselView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC11EngineUIKit18PageCollectionView")
-@interface PageCollectionView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

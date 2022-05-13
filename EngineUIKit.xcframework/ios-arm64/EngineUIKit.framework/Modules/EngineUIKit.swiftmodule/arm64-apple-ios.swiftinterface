@@ -18,14 +18,15 @@ public protocol ImageCarouselViewDelegate : ObjectiveC.NSObjectProtocol {
   @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreGraphics.CGRect?, title: Swift.String?, state: UIKit.UIControl.State?, font: UIKit.UIFont?, color: UIKit.UIColor?)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class PageCollectionView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func loadNib() -> EngineUIKit.PagingCollectionView?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class FixedActionTileView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var ViewModel: EngineUIKit.FixedActionTileViewModel? {
+    get
+    set
+  }
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class FixedActionTileView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+public class FixedActionTileViewModel {
+  public init(title: Swift.String, image: Swift.String)
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PagingCollectionView : UIKit.UIView {
