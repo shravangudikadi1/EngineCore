@@ -16,7 +16,7 @@ import _Concurrency
   public func FixedActionTileView() -> UIKit.UIView
   public func ImageCarouselView(_ images: [UIKit.UIImage?]) -> UIKit.UIView
   public func animatedPageControl(_ images: [UIKit.UIImage?]) -> UIKit.UIView
-  public func segmentedControlView() -> UIKit.UIView
+  public func segmentedControlView(titles: [Swift.String], selectedIndex: Swift.Int, selectorView: UIKit.UIView, selectorTextFont: UIKit.UIFont, selectorTextColor: UIKit.UIColor, selectorViewColor: UIKit.UIColor, textFont: UIKit.UIFont, textColor: UIKit.UIColor, delegate: EngineCoreSwift.SegmentedTapDelegate) -> UIKit.UIView
   @objc deinit
 }
 extension EngineCoreSwift.EngineCoreBase : EngineUIKit.ImageCarouselViewDelegate {
